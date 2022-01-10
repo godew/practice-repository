@@ -1,0 +1,63 @@
+body {
+	width: 100%;
+	overflow-x: hidden;	
+	max-width: 1280px;
+	margin: 0 auto;
+}
+div, span, header, nav, main, section, article, footer, aside {
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	text-decoration: underline;
+}
+.btn {
+	display: block;
+	width: 100px; height: 40px; line-height: 40px; text-align: center;
+	background-color: skyblue;
+	color: white;
+	font-size: 17px;
+	font-weight: bold;
+	transition-duration: 1s;
+}
+.btn:hover {
+	background-color: blue;
+	color: white;
+	transition-duration: 0.5s;
+	text-decoration: none;
+}
+nav > ul { 
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+}
+h1 {
+	display: flex;
+	justify-content: center;
+}
+header > div {
+	display: flex;
+	justify-content: flex-end;
+}
+header > div > a {
+	font-weight: bold;
+}
+.book {
+	width: 100%;
+}
+.book th {
+	cursor: pointer;
+}
+.book th:hover {
+	background-color: skyblue;
+	color: white;
+	cursor: pointer;
+}
+.column_and_add {
+	display: flex;
+	justify-content: space-between;
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+	"-//mybatis.org//DTD Mapper 3.0//EN"
+	"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.wedog.member.MemberDAO">
+	<select id="select" resultType="member" parameterType="member">
+		select * from member 
+			<where>
+				<if test="userid != null">
+					and userid=#{userid}
+				</if>
+				<if test="userpw != null">
+				 	and userpw=#{userpw}
+				</if>
+				<if test="email != null">
+				 	and email=#{email}
+				</if>
+			</where> 
+	</select>
+	
+	<insert id="insertMember" parameterType="member">
+		insert into member values(#{userid}, #{userpw}, #{username}, #{email}, #{gender})
+	</insert>
+	
+	<update id="update" parameterType="member">
+		update member 
+			<set>
+				<if test="userpw != null">userpw=#{userpw},</if>
+				<if test="userpw != null">username=#{username},</if>
+				<if test="userpw != null">email=#{email},</if>
+				<if test="userpw != null">gender=#{gender},</if>
+			</set>
+		where userid=#{userid}
+	</update>
+	
+</mapper>
