@@ -1,0 +1,49 @@
+body {
+	margin: 0 auto;
+	width: 835px;
+	min-width: 835px;
+}
+.name {
+	display: flex;
+	justify-content: flex-end;
+}
+.clock {
+	width: 280px;
+	margin: 0 auto;
+	background-color: black;
+	color: #00ff00;
+	font-weight: bold;
+	text-align: center;
+	padding: 3px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+.result-table, td, th {
+	border : 2px solid black;
+  	border-collapse : collapse;
+}
+td {
+	width: 100px;
+}
+.sunny {
+	background-color: skyblue;
+}
+.many-cloud {
+	background-color: #dadada;
+}
+.cloud {
+	background-color: darkgrey;
+}
+.rain {
+	background-color: grey;
+}
+.minus {
+	background-color: #6a9eff; 
+}
+.zero {
+	background-color: #b9d1ff;
+}
+.barChart {
+	width: 800px;
+	height: 500px;
+}
