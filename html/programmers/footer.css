@@ -1,0 +1,145 @@
+@charset 'utf-8';
+
+footer > .footerTop {
+    height: 118px;
+    box-sizing: border-box;
+    padding: 32px 0;
+    background: linear-gradient(
+90deg, #0C151C 1.3125rem, transparent 1%) center,linear-gradient(#0C151C 1.3125rem, transparent 1%) center,#263747;
+    background-image: linear-gradient(
+90deg, rgb(12, 21, 28) 1.3125rem, transparent 1%), linear-gradient(rgb(12, 21, 28) 1.3125rem, transparent 1%), initial;
+    background-position-x: center, center, initial;
+    background-position-y: center, center, initial;
+    background-size: 1.5rem 1.5rem;
+    background-attachment: initial, initial, initial;
+    background-origin: initial, initial, initial;
+    background-clip: initial, initial, initial;
+    background-color: rgb(38, 55, 71);
+}
+footer > .footerTop > .content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1168px;
+    height: 54px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: bold;
+}
+footer > .footerTop > .content > div > p {
+    color: #0078ff; 
+    margin: 0 0 4px 0;
+}
+footer > .footerTop > .content > div > h5 {
+    color: white;
+    margin: 0;
+    font-size: 16px;
+}
+footer > .footerTop > .content > .btn {
+    box-sizing: border-box;
+    width: 96px;
+    height: 41px;
+    background-color: #0078ff;
+    padding: 7px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 1.5;
+}
+footer > .footerTop > .content > .btn:hover {
+    background-color: #0053F4;
+}
+footer > .footerTop > .content > .btn > span {
+    color: white;
+}
+footer > .footerBottom {
+    box-sizing: border-box;
+    height: 394px;
+    color: #263747;
+    padding: 48px 0;
+    font-size: 16px;
+    width: 1200px;
+    margin: 0 auto;
+}
+footer > .footerBottom > .b1 {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 148px;
+}
+footer > .footerBottom > .b1 > .li {
+    display: flex;
+}
+footer > .footerBottom > .b1 > .li > div {
+    margin-right: 40px;
+    color: #44576c;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+.b5 {
+    display: flex;
+    justify-content: space-between;
+}
+.b5 > .img {
+    display: flex;
+}
+.b5 > .img > div {
+    margin-left: 13px;
+    cursor: pointer;
+}
+.b2, .b3, .b4, .b5{
+    color: #98A8B9;
+    font-size: 11px;
+}
+.b5 > .img > .f {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background-color: #98A8B9;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.b5 > .img > .f:hover {
+    background-color: #092868;
+}
+.b5 > .img > .p {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background-color: #98A8B9;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+.b5 > .img > .p:hover {
+    background-color: red;
+}
+.b5 > .img > .B {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background-color: #98A8B9;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.b5 > .img > .B:hover {
+    background-color: #0078ff;
+}
+.in {
+    cursor: pointer;
+}
+.in:hover {
+    color: #0053F4;
+}
+.tmp {
+    cursor: pointer;
+}
+.tmp:hover {
+    color: #0053F4;
+}

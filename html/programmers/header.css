@@ -1,0 +1,74 @@
+@charset 'utf-8';
+header {
+    background-color: #0C151C;
+    height: 480px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.headerTop {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 46px;
+    padding: 6px 16px;
+}
+.headerTop > img{
+    cursor: pointer;
+}
+ul {
+    display: flex;
+}
+ul > li {
+    color: #B2C0CC;
+    font-weight: 500;
+    display: block;
+    cursor: pointer;
+    margin: 0;
+    padding: 4px 8px;
+    line-height: 0px;
+}
+ul > li:nth-child(4) {
+    border-right: 1px solid #B2C0CC;
+}
+ul > li:hover {
+    color: white;
+}
+.headerBottom {
+    display: flex;
+    justify-content: center;
+    padding: 56px 0 40px 0;
+}
+.headerBottom > .left {
+    width: 600px;
+    height: 350px;
+}
+.headerBottom > .left > h6 {
+    font-size: 14px;
+    margin: 0 0 16px 0;
+    color: #0078FF;
+}
+.headerBottom > .left > div {
+    color: white
+}
+.headerBottom > .left > .btn {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 210px;
+    height: 41px;
+    border-color: #0078FF;
+    background-color: #0078FF;
+    padding: 7px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.headerBottom > .left > .btn:hover {
+    background-color: #0053F4;
+}
+.headerBottom > .left > .btn > span {
+    color: white;
+}
+.headerBottom > .right > img{
+    width: 550px;
+    height: 350px;
+}
