@@ -1,0 +1,23 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "me.wedog.HolomanProperties",
+      "name": "holoman",
+      "type": "me.wedog.HolomanProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "me.wedog.HolomanProperties",
+      "defaultValue": 0,
+      "name": "holoman.how-long",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "me.wedog.HolomanProperties",
+      "name": "holoman.name",
+      "type": "java.lang.String"
+    }
+  ]
+}
