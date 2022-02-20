@@ -2,14 +2,14 @@ n = int(input())
 
 res = []
 # insert sort
-# for _ in range(n):
-#     tmp = int(input())
-#     for i, x in enumerate(res): # insert할 위치 찾기
-#         if x >= tmp:
-#             res.insert(i, tmp)
-#             break
-#     else:
-#         res.append(tmp)
+for _ in range(n):
+    tmp = int(input())
+    for i, x in enumerate(res): # insert할 위치 찾기
+        if x >= tmp:
+            res.insert(i, tmp)
+            break
+    else:
+        res.append(tmp)
 
 
 # bubble sort
