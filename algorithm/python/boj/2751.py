@@ -1,8 +1,9 @@
+import sys
 n = int(input())
 
 res = []
 for _ in range(n):
-    res.append(int(input()))
+    res.append(int(sys.stdin.readline()))
 
 res.sort()
 
