@@ -18,9 +18,17 @@ ct = Counter(tmp).most_common()
 repo = ct[0][1]
 for i in range(1, len(ct)):
     if repo != ct[i][1]:
-        print(sorted(ct[:i], key= lambda x : x[0])[1][0])
-        break
+        if i == 1:
+            print(ct[0][0])
+        else:
+            print(sorted(ct[:i], key= lambda x : x[0])[1][0])
 
+        break
+else:
+    if n == 1:
+        print(tmp[0])
+    else:
+        print(sorted(ct, key= lambda x : x[0])[1][0])
 
 # 범위
 print(tmp[-1] - tmp[0])
