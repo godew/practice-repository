@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-bind:id="uuid" :class="name">{{ num }}</p>
+        <p>{{ doubleNum }}</p>
+        <div v-if="loading"> <!-- DOM정보를 아예 제거 -->
+            Loading...
+        </div>
+        <div v-else>
+            test user has been logged in
+        </div>
+        <div v-show="loading"> <!-- display: none 으로서 육안으로만 안보이고 DOM정보는 남아 있다 -->
+            test
+        </div>
+        <input v-model="message"> <!-- 양방향 바인딩 -->
+        <p>{{ message }}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                num: 10,
+                uuid: 'abc1234',
+                name: 'text-blue',
+                loading: true,
+                message: 'welcome v-model'
+            },
+            computed: {
+                doubleNum: function() {
+                    return this.num * 2;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
