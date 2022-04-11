@@ -4,14 +4,28 @@
         <span class="addContainer" @click="addTodo">
             <i class="fa-solid fa-plus addBtn"></i>
         </span>
+
+        <alert-modal v-if="showModal" @close="showModal = false">
+            <h3 slot="header">
+                경고!
+                <i class="closeModalBtn fas fa-times" @click="showModal = false"></i>
+            </h3>
+
+            <div slot="body">
+                아무것도 입력하지 않았습니다.
+            </div>
+        </alert-modal>
     </div>
 </template>
 
 <script>
+import AlertModal from './common/AlertModal.vue';
+
 export default {
     data() {
         return {
-            newTodoItem: ""
+            newTodoItem: "",
+            showModal: false
         }
     },
     methods: {
@@ -19,11 +33,16 @@ export default {
             if(this.newTodoItem) {
                 this.$emit('addTodoItem', this.newTodoItem);
                 this.clearInput();
+            } else {
+                this.showModal = !this.showModal;
             }
         },
         clearInput: function() {
             this.newTodoItem = '';
         }
+    },
+    components: {
+        'alert-modal': AlertModal
     }
 };
 </script>
@@ -52,5 +71,8 @@ input:focus {
 .addBtn {
 	color: white;
 	vertical-align: middle;
+}
+.closeModalBtn {
+    cursor: pointer;
 }
 </style>
