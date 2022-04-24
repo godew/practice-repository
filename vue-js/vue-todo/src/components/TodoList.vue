@@ -1,30 +1,37 @@
 <template>
     <div>
         <transition-group name="list" tag="ul">
-            <li v-for="(todoItem, idx) in propsdata" :key="todoItem.item" class="shadow">
-                <i class="checkBtn fa-solid fa-check" :class="{checkBtnComplated: todoItem.completed}" @click="toggleComplete(todoItem, idx)"></i>
+            <li v-for="(todoItem, idx) in storedTodoItems" :key="todoItem.item" class="shadow">
+                <i class="checkBtn fa-solid fa-check" :class="{checkBtnComplated: todoItem.completed}" 
+                    @click="toggleComplete({todoItem, idx})"></i>
                 <span :class="{textCompleted: todoItem.completed}">{{ todoItem.item }}</span>
-                <span class="removeBtn" @click="removeTodo(todoItem, idx)">
+                <span class="removeBtn" @click="removeTodo({todoItem, idx})">
                     <i class="fa-solid fa-trash-can"></i>
                 </span>
             </li>
         </transition-group>
     </div>
 </template>
-
+ 
 <script>
+import { mapState, mapGetters, mapMutations } from 'vuex';
 export default {
-    props: {
-        propsdata: Object
-    },
-    
     methods: {
-        removeTodo: function(todoItem, idx) {
-            this.$emit('removeItem', todoItem, idx);
-        },
-        toggleComplete: function(todoItem, idx) {
-            this.$emit('toggleItem', todoItem, idx);
-        }
+        ...mapMutations({
+            removeTodo: 'removeOneItem',
+            toggleComplete: 'toggleOneItem'
+        }),
+    },
+
+    computed: {
+        ...mapState({
+            todoItems: (state) => state.todoItems
+        }),
+        ...mapGetters(['storedTodoItems'])
+        // 이름이 다를 때 객체 형태로 사용가능
+        // ...mapGetters({
+        //     storedTodoItems
+        // })
     }
 };
 </script>
